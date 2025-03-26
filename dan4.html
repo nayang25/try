@@ -103,15 +103,14 @@
         }
 
         .container {
-             background-color: rgba(255, 255, 255, 0.2);
-    padding: 10px; 
-    border-radius: 20px; 
-    padding: 10px;
-    margin: 60px auto; 
-    width: 50%; 
-    border: 2px solid #08dceb;
-    text-align: center; 
-    color: #fff;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px; 
+            border-radius: 20px; 
+            margin: 60px auto; 
+            width: 50%; 
+            border: 2px solid #08dceb;
+            text-align: center; 
+            color: #fff;
         }
 
         .form-title {
@@ -168,7 +167,7 @@
             color: #080808;
             cursor: pointer;
             transition: background-color 0.3s;
-            border-radius: 5px
+            border-radius: 5px;
         }
 
         .payment-form input[type="submit"]:hover,
@@ -181,7 +180,6 @@
                 width: 100%;
             }
         }
-
 
         .icons a {
             text-decoration: none;
@@ -199,13 +197,14 @@
         .icons ion-icon:hover {
             color: #08dceb;
         }
+
         textarea {
-    border-radius: 9px; 
-    padding: 8px;
-    border: 1px solid #ccc;
-    width: calc(90% - 18px); 
-    margin-bottom: 1px;
-}
+            border-radius: 9px; 
+            padding: 8px;
+            border: 1px solid #ccc;
+            width: calc(90% - 18px); 
+            margin-bottom: 1px;
+        }
     </style>
 </head>
 <body>
@@ -218,7 +217,7 @@
 
         <div class="menu">
             <ul>
-                <<li><a href="dan.html">HOME</a></li>
+                <li><a href="dan.html">HOME</a></li>
                 <li><a href="dan1.html">ABOUT</a></li>
                 <li><a href="dan2.html">GALLERY</a></li>
                 <li><a href="dan3.html">REGISTRATION</a></li>
@@ -226,71 +225,67 @@
                 <li><a href="dan5.html">RESERVATION</a></li>
             </ul>
         </div>
-        
+
         <script>
-        function validateReset() {
-            if (confirm("Are you sure you want to reset the form?")) {
-                document.getElementById("RegForm").reset();
+            function validateReset() {
+                if (confirm("Are you sure you want to reset the form?")) {
+                    document.getElementById("RegForm").reset();
+                }
             }
-        }
-        
-    </script>
+
+            function showAlert() {
+                alert("Thank you for submitting!");
+            }
+        </script>
+
         <div class="menu-log">
             <a href="dan0.html">LOGIN</a>
         </div>
     </div>
-        <div class="container">
-            <h1 class="form-title">Inquiry Form</h1>
-            <form class="payment-form" action="dan9.html" method="post">
-                <div class="payment-form-column">
-                    <label for="name">Firstname:</label>
-                    <input type="text" id="name" name="name" required>
-    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-    
-                    <label for="arrivalDate">Check in:</label>
-                    <input type="date" id="arrivalDate" name="arrivalDate" required>
-    
-                    <label for="roomType">Room Type:</label>
-                    <select id="roomType" name="roomType" required>
-                        <option value="airconditionSplit">Air Condition Split Type</option>
-                        <option value="airconditionBox">Air Condition Box Type</option>
-                        <option value="aircooler">Air Cooler</option>
-                    </select>
-    
-                    <label for="bedSize">Bed Size:</label>
-                    <select id="bedSize" name="bedSize" required>
-                        <option value="king">King</option>
-                        <option value="queen">Queen</option>
-                        <option value="classic">Classic</option>
-                    </select>
-                </div>
-                <div class="payment-form-column">
-                    <label for="name">Lastname:</label>
-                    <input type="text" id="name" name="name" required>
-    
-                    <label for="cellphone">Cellphone No.:</label>
-                <input type="text" id="cellphone" name="cellphone" required pattern="[0-9]+" title="Please enter a number">
-    
-                <label for="arrivalDate">Check out:</label>
-                <input type="date" id="arrivalDate" name="arrivalDate" required>
-    
-                    <label for="inquiry">Customer Inquiry:</label>
-                    <textarea id="inquiry" name="inquiry" required></textarea>
-                    <br>
-                    <br>
-                    <input type="submit" value="Submit">
-                    <button type="reset" onclick="return validateReset()">Reset</button> </form>
-                </div>
-            </form>
-        </div>
+
+    <div class="container">
+        <h1 class="form-title">Inquiry Form</h1>
         
+        <form class="payment-form" action="javascript:void(0);" method="post" onsubmit="showAlert(); return false;">
+            <div class="payment-form-column">
+                <label for="name">Firstname:</label>
+                <input type="text" id="name" name="firstname" required>
 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-    
+                <label for="arrivalDate">Check in:</label>
+                <input type="date" id="arrivalDate" name="arrivalDate" required>
+
+                <label for="roomType">Room Type:</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="airconditionSplit">Air Condition Split Type</option>
+                    <option value="airconditionBox">Air Condition Box Type</option>
+                    <option value="aircooler">Air Cooler</option>
+                </select>
+            </div>
+
+            <div class="payment-form-column">
+                <label for="lastname">Lastname:</label>
+                <input type="text" id="lastname" name="lastname" required>
+
+                <label for="cellphone">Cellphone No.:</label>
+                <input type="text" id="cellphone" name="cellphone" required pattern="[0-9]+" title="Please enter a number">
+
+                <label for="checkout">Check out:</label>
+                <input type="date" id="checkout" name="checkout" required>
+
+                <label for="inquiry">Customer Inquiry:</label>
+                <textarea id="inquiry" name="inquiry" required></textarea>
+
+                <input type="submit" value="Submit">
+                <button type="reset" onclick="return validateReset()">Reset</button>
+            </div>
+        </form>
     </div>
 </div>
+
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
 </body>
 </html>
