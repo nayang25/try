@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>butiki</title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(bitch.jpg);
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* Required for absolute positioning */
+        }
+
+        .menu {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px; 
+        }
+
+        .icon {
+            position: absolute;
+            top: 10px; /* Adjust top positioning as needed */
+            left: 383px; /* Adjust left positioning as needed */
+            color: #08dceb;
+            font-size: 23px;
+            font-family: Arial;
+            width: 200px;
+            height: 70px;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        ul li {
+            margin-left: 40px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+            font-size: 20px;
+        }
+
+        ul li a:hover {
+            color: #08dceb;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px; 
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+            border: 2px solid #08dceb;
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+        }
+
+        .container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .container input {
+            width: calc(100% - 40px); 
+            padding: 10px;
+            margin: 10px 0; 
+            border-radius: 5px;
+            border: none;
+        }
+
+        .container input[type="submit"],
+        .container input[type="reset"] {
+            width: calc(50% - 40px); 
+            padding: 10px;
+            margin: 10px 0; 
+            background-color: #08dceb;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .container input[type="submit"]:hover,
+        .container input[type="reset"]:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        
+        #strength-meter {
+            margin-top: 10px;
+            text-align: center; 
+        }
+
+        #strength-text {
+            font-weight: bold;
+        }
+
+        .weak {
+            color: rgb(110, 26, 26); 
+        }
+
+        .medium {
+            color: orange; 
+        }
+
+        .strong {
+            color: rgb(63, 201, 63); 
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="icon">
+    <h2 class="logo">NAYANG'S BEACH</h2>
+</div>
+
+<div class="menu">
+    <ul>
+        <li><a href="dan.html">HOME</a></li>
+        <li><a href="dan1.html">ABOUT</a></li>
+        <li><a href="dan2.html">GALLERY</a></li>
+        <li><a href="dan3.html">REGISTRATION</a></li>
+        <li><a href="dan4.html">CONTACT</a></li>
+    </ul>
+</div>
+
+<script>
+    function validateReset() {
+        if (confirm("Are you sure you want to reset the form?")) {
+            document.getElementById("loginForm").reset();
+        }
+    }
+
+    function validateform() { 
+        alert("Welcome to Nayang's Beach");
+        return true; 
+    }
+
+    function checkPasswordStrength() {
+        var password = document.getElementById('password').value;
+        var meter = document.getElementById('strength-meter');
+        var strengthText = document.getElementById('strength-text');
+
+        var strength = 0;
+        if (password.match(/[a-z]/)) {
+            strength++;
+        }
+        if (password.match(/[A-Z]/)) {
+            strength++;
+        }
+        if (password.match(/[0-9]/)) {
+            strength++;
+        }
+        if (password.length >= 8) {
+            strength++;
+        }
+
+        switch(strength) {
+            case 1:
+                strengthText.textContent = "Weak";
+                strengthText.className = "weak";
+                break;
+            case 2:
+                strengthText.textContent = "Medium";
+                strengthText.className = "medium";
+                break;
+            case 3:
+            case 4:
+                strengthText.textContent = "Strong";
+                strengthText.className = "strong";
+                break;
+            default:
+                strengthText.textContent = "";
+                break;
+        }
+    }
+</script>
+
+<div class="container">
+    <h1>LOGIN</h1>
+    <form name="myform" method="POST" action="" onsubmit="return validateform()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required oninput="checkPasswordStrength()">
+        <div id="strength-meter">
+            <span id="strength-text"></span>
+        </div>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset" onclick="validateReset()">
+    </form>
+</div>
+
+</body>
+</html>

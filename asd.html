@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>butiki</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(bitch.jpg);
+            background-position: bottom;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* Required for absolute positioning */
+        }
+
+        .menu {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px; 
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        ul li {
+            margin-left: 40px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+            font-size: 20px;
+        }
+
+        ul li a:hover {
+            color: #ff7200;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px; 
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+            border: 2px solid #ff7200;
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+        }
+
+        .container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .container input {
+            width: calc(100% - 40px); 
+            padding: 10px;
+            margin: 10px 0; 
+            border-radius: 5px;
+            border: none;
+        }
+
+        .container input[type="submit"],
+        .container input[type="reset"] {
+            width: calc(100% - 40px); 
+            padding: 10px;
+            margin: 10px 0; 
+            background-color: #ff7200;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .container input[type="submit"]:hover,
+        .container input[type="reset"]:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .icons a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .icons ion-icon {
+            color: #fff;
+            font-size: 30px;
+            padding-left: 14px;
+            padding-top: 5px;
+            transition: 0.3s ease;
+        }
+
+        .icons ion-icon:hover {
+            color: #ff7200;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">NAYANG'S BEACH</h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="dan.html">HOME</a></li>
+                <li><a href="dan1.html">ABOUT</a></li>
+                <li><a href="dan2.html">GALLERY</a></li>
+                <li><a href="dan3.html">REGISTRATION</a></li>
+                <li><a href="dan4.html">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <div class="menu-log">
+            <a href="asd.html">LOGIN</a>
+        </div>
+    </div>
+
+   
+<script>
+    function validateReset() {
+        if (confirm("Are you sure you want to reset the form?")) {
+            document.getElementById("loginForm").reset();
+        }
+    }
+
+    function validateform() { 
+        alert("Welcome to Nayang's");
+        return true; 
+    }
+</script>
+
+<div class="container">
+    <h1>LOGIN</h1>
+    <form name="myform" method="POST" action="" onsubmit="return validateform()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset" onclick="validateReset()">
+    </form>
+</div>
+
+
+</body>
+</html>
+
+        
+</div>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

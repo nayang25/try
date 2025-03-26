@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>butiki</title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(bitch.jpg);
+    background-position: bottom;
+    background-size: cover;
+    min-height: 120%;
+    padding-bottom:50px;
+}
+
+
+
+
+.navbar {
+    max-width: 1200px; 
+    width: 100%; 
+    height: 90px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+        .icon {
+            width: 200px;
+            height: 70px;
+        }
+
+        .logo {
+            color: #08dceb;
+            font-size: 35px;
+            font-family: Arial;
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        .menu {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        ul li {
+            margin-left: 40px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+        }
+
+        ul li a:hover {
+            color: #08dceb;
+        }
+
+        .menu-log a {
+            text-decoration: none; 
+            color: #fff;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out; 
+        }
+
+        .menu-log a:hover {
+            color: #08dceb;
+        }
+
+        .content {
+            width: 1200px;
+            height: auto;
+            margin: auto;
+            color: #fff;
+            position: relative;
+            padding-top: 50px;
+        }
+
+        .content .par {
+            padding-left: 20px;
+            padding-bottom: 25px;
+            font-family: Arial;
+            letter-spacing: 1.2px;
+            line-height: 30px;
+        }
+
+        .content h1 {
+            font-family: 'Times New Roman';
+            font-size: 50px;
+            padding-left: 20px;
+            margin-top: 9%;
+            letter-spacing: 2px;
+            text-align: center; 
+        }
+
+        .container-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px; 
+    border-radius: 10px; 
+    padding: 10px;
+    margin: 10px auto; 
+    width: 40%; 
+    border: 2px solid #08dceb;
+    text-align: center; 
+    color: #fff;
+}
+
+
+.container-box input[type="text"],
+.container-box input[type="date"],
+.container-box input[type="number"],
+.container-box input[type="tel"],
+.container-box input[type="submit"]
+.container-box textarea,
+.container-box select {
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: calc(90% - 18px); 
+    margin-bottom: 10px;
+}
+.container-box input[type="submit"] {
+    background-color: #08dceb;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container-box input[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.container-box button[type="reset"] {
+    background-color: #08dceb;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container-box button[type="reset"]:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.container-box select {
+    width: calc(100% - 24px); 
+}
+
+.container-box input[type="submit"]:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+
+        .icons a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .icons ion-icon {
+            color: #fff;
+            font-size: 30px;
+            padding-left: 14px;
+            padding-top: 5px;
+            transition: 0.3s ease;
+        }
+
+        .icons ion-icon:hover {
+            color: #08dceb;
+        }
+        textarea {
+    border-radius: 9px; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: calc(90% - 18px); 
+    margin-bottom: 1px;
+}
+    </style>
+</head>
+<body>
+
+<div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">NAYANG'S BEACH</h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <<li><a href="dan.html">HOME</a></li>
+                <li><a href="dan1.html">ABOUT</a></li>
+                <li><a href="dan2.html">GALLERY</a></li>
+                <li><a href="dan3.html">REGISTRATION</a></li>
+                <li><a href="dan4.html">INQUIRY</a></li>
+                <li><a href="dan5.html">RESERVATION</a></li>
+            </ul>
+        </div>
+        <script>
+        function validateReset() {
+            if (confirm("Are you sure you want to reset the form?")) {
+                document.getElementById("RegForm").reset();
+            }
+        }
+        
+    </script>
+        <div class="menu-log">
+            <a href="dan0.html">LOGIN</a>
+        </div>
+    </div>
+        <div class="container-box"> 
+            <h1>Registration Form</h1>
+            <form id="RegForm" action="dan8.html" method="post" onsubmit="return validateForm()">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+        
+                <label for="address">Address:</label><br>
+                <input type="text" id="address" name="address" required><br><br>
+        
+                <label for="birthday">Birthday:</label><br>
+                <input type="date" id="birthday" name="birthday" required><br><br>
+        
+                <label for="age">Age:</label><br>
+                <input type="number" id="age" name="age" required><br><br>
+        
+                <label for="cellphone">Cellphone No.:</label><br>
+                <input type="text" id="cellphone" name="cellphone" required pattern="[0-9]+" title="Please enter a number">
+        
+                <label for="id_type">Identification Type:</label><br>
+                <select id="id_type" name="id_type" required>
+                    <option value="government">Government</option>
+                    <option value="other">Students</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+        
+                <label for="id_number">ID No.:</label><br>
+                <input type="text" id="id_number" name="id_number" required pattern="[0-9]+" title="Please enter a number"><br><br>
+        
+                <label for="gender">Gender:</label><br>
+                <br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other" required>
+                <label for="other">Other</label><br><br>
+        
+                <label for="request">CONCERN/REQUEST</label><br>
+                <textarea id="request" name="request" rows="4" cols="50"></textarea><br><br>
+            
+                <input type="submit" value="Submit">
+                <button type="reset" onclick="return validateReset()">Reset</button> </form>
+            </form>
+        </div>
+        
+
+
+    
+    </div>
+</div>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

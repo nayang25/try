@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>butiki</title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(bitch.jpg);
+            background-position: bottom;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .navbar {
+            width: 1200px;
+            height: 75px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .icon {
+            width: 200px;
+            height: 70px;
+        }
+
+        .logo {
+            color: #08dceb;
+            font-size: 35px;
+            font-family: Arial;
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        .menu {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        ul li {
+            margin-left: 40px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+        }
+
+        ul li a:hover {
+            color: #08dceb;
+        }
+
+        .menu-log a {
+            text-decoration: none; 
+            color: #fff;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out; 
+        }
+
+        .menu-log a:hover {
+            color: #08dceb;
+        }
+
+        .content {
+            width: 1200px;
+            height: auto;
+            margin: auto;
+            color: #fff;
+            position: relative;
+            padding-top: 50px;
+        }
+
+        .content .par {
+            padding-left: 20px;
+            padding-bottom: 25px;
+            font-family: Arial;
+            letter-spacing: 1.2px;
+            line-height: 30px;
+        }
+
+        .content h1 {
+            font-family: 'Times New Roman';
+            font-size: 50px;
+            padding-left: 20px;
+            margin-top: 9%;
+            letter-spacing: 2px;
+            text-align: center; 
+        }
+
+        .container {
+             background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px; 
+    border-radius: 20px; 
+    padding: 10px;
+    margin: 60px auto; 
+    width: 50%; 
+    border: 2px solid #08dceb;
+    text-align: center; 
+    color: #fff;
+        }
+
+        .form-title {
+            font-size: 26px;
+            font-weight: 600;
+            text-align: center;
+            padding-bottom: 6px;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+            border-bottom: solid 1px white;
+            margin-bottom: 20px;
+        }
+
+        .payment-form {
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .payment-form-column {
+            width: calc(50% - 10px); 
+        }
+
+        .payment-form-column label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .payment-form-column input,
+        .payment-form-column select,
+        .payment-form-column textarea {
+            width: 90%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+
+        .payment-form-column textarea {
+            border-radius: 9px; 
+            padding: 15px;
+            border: 1px solid #ccc;
+            width: calc(90% - 18px); 
+            margin-bottom: 10px;
+        }
+
+        .payment-form input[type="submit"],
+        .payment-form button[type="reset"] {
+            width: auto;
+            padding: 10px 20px;
+            background-color:#08dceb;
+            border: none;
+            color: #080808;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 5px
+        }
+
+        .payment-form input[type="submit"]:hover,
+        .payment-form button[type="reset"]:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            .payment-form-column {
+                width: 100%;
+            }
+        }
+
+
+        .icons a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .icons ion-icon {
+            color: #fff;
+            font-size: 30px;
+            padding-left: 14px;
+            padding-top: 5px;
+            transition: 0.3s ease;
+        }
+
+        .icons ion-icon:hover {
+            color: #08dceb;
+        }
+        textarea {
+    border-radius: 9px; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: calc(90% - 18px); 
+    margin-bottom: 1px;
+}
+    </style>
+</head>
+<body>
+
+<div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">NAYANG'S BEACH</h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <<li><a href="dan.html">HOME</a></li>
+                <li><a href="dan1.html">ABOUT</a></li>
+                <li><a href="dan2.html">GALLERY</a></li>
+                <li><a href="dan3.html">REGISTRATION</a></li>
+                <li><a href="dan4.html">INQUIRY</a></li>
+                <li><a href="dan5.html">RESERVATION</a></li>
+            </ul>
+        </div>
+        
+        <script>
+        function validateReset() {
+            if (confirm("Are you sure you want to reset the form?")) {
+                document.getElementById("RegForm").reset();
+            }
+        }
+        
+    </script>
+        <div class="menu-log">
+            <a href="dan0.html">LOGIN</a>
+        </div>
+    </div>
+        <div class="container">
+            <h1 class="form-title">Inquiry Form</h1>
+            <form class="payment-form" action="dan9.html" method="post">
+                <div class="payment-form-column">
+                    <label for="name">Firstname:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="arrivalDate">Check in:</label>
+                    <input type="date" id="arrivalDate" name="arrivalDate" required>
+    
+                    <label for="roomType">Room Type:</label>
+                    <select id="roomType" name="roomType" required>
+                        <option value="airconditionSplit">Air Condition Split Type</option>
+                        <option value="airconditionBox">Air Condition Box Type</option>
+                        <option value="aircooler">Air Cooler</option>
+                    </select>
+    
+                    <label for="bedSize">Bed Size:</label>
+                    <select id="bedSize" name="bedSize" required>
+                        <option value="king">King</option>
+                        <option value="queen">Queen</option>
+                        <option value="classic">Classic</option>
+                    </select>
+                </div>
+                <div class="payment-form-column">
+                    <label for="name">Lastname:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="cellphone">Cellphone No.:</label>
+                <input type="text" id="cellphone" name="cellphone" required pattern="[0-9]+" title="Please enter a number">
+    
+                <label for="arrivalDate">Check out:</label>
+                <input type="date" id="arrivalDate" name="arrivalDate" required>
+    
+                    <label for="inquiry">Customer Inquiry:</label>
+                    <textarea id="inquiry" name="inquiry" required></textarea>
+                    <br>
+                    <br>
+                    <input type="submit" value="Submit">
+                    <button type="reset" onclick="return validateReset()">Reset</button> </form>
+                </div>
+            </form>
+        </div>
+        
+
+
+    
+    </div>
+</div>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
