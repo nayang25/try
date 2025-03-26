@@ -104,14 +104,13 @@
 
         .container {
              background-color: rgba(255, 255, 255, 0.2);
-    padding: 10px; 
-    border-radius: 20px; 
-    padding: 10px;
-    margin: 60px auto; 
-    width: 50%; 
-    border: 2px solid #08dceb;
-    text-align: center; 
-    color: #fff;
+             padding: 10px; 
+             border-radius: 20px; 
+             margin: 60px auto; 
+             width: 50%; 
+             border: 2px solid #08dceb;
+             text-align: center; 
+             color: #fff;
         }
 
         .form-title {
@@ -182,7 +181,6 @@
             }
         }
 
-
         .icons a {
             text-decoration: none;
             color: #fff;
@@ -199,13 +197,14 @@
         .icons ion-icon:hover {
             color: #08dceb;
         }
+
         textarea {
-    border-radius: 9px; 
-    padding: 8px;
-    border: 1px solid #ccc;
-    width: calc(90% - 18px); 
-    margin-bottom: 1px;
-}
+            border-radius: 9px; 
+            padding: 8px;
+            border: 1px solid #ccc;
+            width: calc(90% - 18px); 
+            margin-bottom: 1px;
+        }
     </style>
 </head>
 <body>
@@ -218,7 +217,7 @@
 
         <div class="menu">
             <ul>
-                <<li><a href="dan.html">HOME</a></li>
+                <li><a href="dan.html">HOME</a></li>
                 <li><a href="dan1.html">ABOUT</a></li>
                 <li><a href="dan2.html">GALLERY</a></li>
                 <li><a href="dan3.html">REGISTRATION</a></li>
@@ -226,76 +225,67 @@
                 <li><a href="dan5.html">RESERVATION</a></li>
             </ul>
         </div>
-        <script>
-        function validateReset() {
-            if (confirm("Are you sure you want to reset the form?")) {
-                document.getElementById("RegForm").reset();
-            }
-        }
-        
-    </script>
+
         <div class="menu-log">
             <a href="dan0.html">LOGIN</a>
         </div>
     </div>
-        <div class="container">
-            <h1 class="form-title">Payment Form</h1>
-            <form class="payment-form" action="POKE.html" method="post">
-                <div class="payment-form-column">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
 
-                    <label for="arrivalDate">Arrival Date:</label>
-                    <input type="date" id="arrivalDate" name="arrivalDate" required>
-    
-                    <label for="bedSize">Bed Size:</label>
-                    <select id="bedSize" name="bedSize" required>
-                        <option value="king">King</option>
-                        <option value="queen">Queen</option>
-                        <option value="classic">Classic</option>
-                    </select>
-    
-                    <label for="roomType">Room Type:</label>
-                    <select id="roomType" name="roomType" required>
-                        <option value="airconditionSplit">Air Condition Split Type</option>
-                        <option value="airconditionBox">Air Condition Box Type</option>
-                        <option value="aircooler">Air Cooler</option>
-                    </select>
-    
-                </div>
-                <div class="payment-form-column">
-                    <label for="numAdults">Number of Adults:</label>
-                    <input type="number" id="numAdults" name="numAdults" required>
-    
-                    <label for="numKids">Number of Kids:</label>
-                    <input type="number" id="numKids" name="numKids" required>
-    
-                    <label for="numDays">Number of Days:</label>
-                    <input type="number" id="numDays" name="numDays" required>
-    
-                    <label for="inquiry">MODE OF PAYMENT</label>
-                    <select id="bedSize" name="bedSize" required>
-                        <option value="king">Credit Card</option>
-                        <option value="queen">Gcash</option>
-                        <option value="classic">PayMaya</option>
-                        <option value="classic">Cash</option>
-                    </select>
-                    <br>
-                    <br>
-                    <input type="submit" value="PAY NOW">
-                   
-                </div>
-            </form>
-        </div>
+    <div class="container">
+        <h1 class="form-title">Payment Form</h1>
         
+        <!-- Added alert on form submission -->
+        <form class="payment-form" onsubmit="alert('Payment successful! Thank you.'); return false;">
+            <div class="payment-form-column">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-    
+                <label for="arrivalDate">Arrival Date:</label>
+                <input type="date" id="arrivalDate" name="arrivalDate" required>
+
+                <label for="bedSize">Bed Size:</label>
+                <select id="bedSize" name="bedSize" required>
+                    <option value="king">King</option>
+                    <option value="queen">Queen</option>
+                    <option value="classic">Classic</option>
+                </select>
+
+                <label for="roomType">Room Type:</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="airconditionSplit">Air Condition Split Type</option>
+                    <option value="airconditionBox">Air Condition Box Type</option>
+                    <option value="aircooler">Air Cooler</option>
+                </select>
+            </div>
+
+            <div class="payment-form-column">
+                <label for="numAdults">Number of Adults:</label>
+                <input type="number" id="numAdults" name="numAdults" required>
+
+                <label for="numKids">Number of Kids:</label>
+                <input type="number" id="numKids" name="numKids" required>
+
+                <label for="numDays">Number of Days:</label>
+                <input type="number" id="numDays" name="numDays" required>
+
+                <label for="paymentMode">MODE OF PAYMENT</label>
+                <select id="paymentMode" name="paymentMode" required>
+                    <option value="creditCard">Credit Card</option>
+                    <option value="gcash">Gcash</option>
+                    <option value="paymaya">PayMaya</option>
+                    <option value="cash">Cash</option>
+                </select>
+
+                <br><br>
+                <input type="submit" value="PAY NOW">
+            </div>
+        </form>
     </div>
 </div>
+
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>
